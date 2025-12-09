@@ -530,6 +530,14 @@ https://templatemo.com/tm-597-neural-glass
          transform: scale(1);
     }
 }
+ .hero-buttons {
+     display: flex;
+     gap: 20px;
+     justify-content: center;
+     flex-wrap: wrap;
+     opacity: 0;
+     animation: buttonSlideUp 1.2s ease 1.5s forwards;
+}
  .hero-stats {
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -626,6 +634,17 @@ https://templatemo.com/tm-597-neural-glass
  .cta-button.secondary:hover {
      background: rgba(224, 163, 255, 0.08);
      box-shadow: 0 12px 30px rgba(224, 163, 255, 0.2);
+}
+/* Nav Item Icon */
+ .nav-item-icon {
+     font-size: 1.5rem;
+     margin-bottom: 10px;
+     transform: rotate(-30deg);
+     filter: drop-shadow(0 0 10px currentColor);
+     transition: all 0.4s ease;
+}
+ .btn:hover .nav-item-icon {
+     transform: rotate(0deg);
 }
 /* Section 2: Diagonal Features */
  .features {
@@ -770,7 +789,7 @@ https://templatemo.com/tm-597-neural-glass
 }
  .hexagon-container {
      display: grid;
-     grid-template-columns: repeat(3, 1fr);
+     grid-template-columns: repeat(4, 1fr);
      gap: 30px;
      max-width: 1300px;
      margin: 0 auto;
@@ -790,7 +809,7 @@ https://templatemo.com/tm-597-neural-glass
      width: 100%;
      height: 100%;
      position: relative;
-     transform: rotate(30deg);
+     transform: rotate(0deg);
      border-radius: 12px;
      padding: 20px 10px;
      display: flex;
@@ -802,7 +821,6 @@ https://templatemo.com/tm-597-neural-glass
      transition: all 0.4s ease;
 }
  .hexagon:hover .hexagon-inner {
-     transform: rotate(0deg);
      border-radius: 25px;
 }
  .hexagon:nth-child(odd) .hexagon-inner {
@@ -816,37 +834,25 @@ https://templatemo.com/tm-597-neural-glass
  .hexagon-icon {
      font-size: 1.5rem;
      margin-bottom: 10px;
-     transform: rotate(-30deg);
      filter: drop-shadow(0 0 10px currentColor);
      transition: all 0.4s ease;
-}
- .hexagon:hover .hexagon-icon {
-     transform: rotate(0deg);
 }
  .hexagon h4 {
      font-size: 1.2rem;
      color: #ffffff;
-     transform: rotate(-30deg);
      margin-bottom: 8px;
      font-weight: bold;
      text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
      transition: all 0.4s ease;
 }
- .hexagon:hover h4 {
-     transform: rotate(0deg);
-}
  .hexagon p {
      font-size: 0.9rem;
      color: #e0e0e0;
-     transform: rotate(-30deg);
      line-height: 1.4;
      max-width: 160px;
      word-wrap: break-word;
      hyphens: auto;
      transition: all 0.4s ease;
-}
- .hexagon:hover p {
-     transform: rotate(0deg);
 }
 /* Section 4: Enhanced Timeline */
  .timeline {
@@ -1133,7 +1139,62 @@ https://templatemo.com/tm-597-neural-glass
  .footer-design a:hover {
      color: #ff69b4;
      text-shadow: 0 0 8px rgba(255, 105, 180, 0.5);
-}
+ }
+
+ /* Button style for links */
+ .btn {
+     display: inline-block;
+     padding: 12px 24px;
+     background: linear-gradient(45deg, #00ffff, #ff0080);
+     color: #000;
+     text-decoration: none;
+     border-radius: 10px;
+     font-weight: bold;
+     font-size: 1rem;
+     transition: all 0.3s ease;
+     cursor: pointer;
+     text-align: center;
+ }
+
+ .btn:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4);
+ }
+
+ .hexagon-btn {
+     position: absolute;
+     bottom: 10px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: auto;
+     min-width: 150px;
+ }
+
+ .showcase-button-container {
+     text-align: center;
+     margin-top: 40px;
+     padding: 20px;
+ }
+
+ .showcase-btn {
+     display: inline-block;
+     padding: 15px 30px;
+     background: linear-gradient(45deg, #e0a3ff, #ff69b4);
+     color: #000;
+     text-decoration: none;
+     border-radius: 25px;
+     font-weight: 600;
+     font-size: 1.1rem;
+     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+     box-shadow: 0 4px 15px rgba(224, 163, 255, 0.3);
+     text-transform: uppercase;
+     letter-spacing: 0.02em;
+ }
+
+ .showcase-btn:hover {
+     transform: translateY(-3px) scale(1.05);
+     box-shadow: 0 12px 30px rgba(224, 163, 255, 0.4);
+ }
 /* Mobile Responsiveness */
  @media (max-width: 1024px) {
 	 .feature-row {
